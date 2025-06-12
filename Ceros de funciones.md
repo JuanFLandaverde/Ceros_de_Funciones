@@ -85,9 +85,3 @@ donde $$C$$ es la constante de convergencia.
 
 ---
 
-## ✍️ Autor
-
-- **Tu Nombre**  
-- Universidad Autónoma del Estado de Hidalgo (UAEH)
-
-
