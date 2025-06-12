@@ -2,9 +2,9 @@
 
 Este archivo contiene una descripción breve y teórica de los métodos numéricos implementados en este repositorio, enfocados en la solución de ecuaciones no lineales de la forma:
 
-\[
+$$ 
 f(x) = 0
-\]
+$$
 
 ## 📐 1. Método de Bisección
 
