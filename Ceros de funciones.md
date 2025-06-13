@@ -48,7 +48,25 @@ $$
 
 ---
 
-## 🔁 4. Método de Punto Fijo
+## ⚖️ 4. Método de Regula-Falsi (Falsa Posición)
+
+Es un método **cerrado** como la bisección, pero en lugar de usar el punto medio del intervalo, calcula el punto donde la línea secante entre $$f(a)$$ y $$f(b)$$ corta el eje $$x$$.
+
+La fórmula para encontrar la siguiente aproximación $$x_r$$ es:
+
+$$
+x_r = b - \frac{f(b)(a - b)}{f(a) - f(b)}
+$$
+
+Luego se evalúa el signo de $$f(x_r) \cdot f(a)$$ para decidir el nuevo intervalo, igual que en la bisección.
+
+- Convergencia: **lineal** (más rápida que bisección en muchos casos)  
+- Ventajas: más eficiente que la bisección  
+- Desventajas: puede estancarse si uno de los extremos no se actualiza (problema de "anclaje")
+
+---
+
+## 🔁 5. Método de Punto Fijo
 
 Reescribe la ecuación original como $$x = g(x)$$, y se itera:
 
@@ -67,7 +85,7 @@ Para que el método converja, la función $$g(x)$$ debe cumplir:
 
 ---
 
-## 📊 5. Análisis de Convergencia
+## 📊 6. Análisis de Convergencia
 
 Durante la ejecución de algunos métodos (como Newton y Secante), se guarda el error relativo en cada iteración:
 
@@ -84,4 +102,5 @@ $$
 donde $$C$$ es la constante de convergencia.
 
 ---
+
 
