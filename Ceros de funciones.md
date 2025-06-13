@@ -83,6 +83,63 @@ Para que el método converja, la función $$g(x)$$ debe cumplir:
 - Ventajas: simple de implementar  
 - Desventajas: depende fuertemente de la elección de $$g(x)$$
 
+
+---
+## ⚡ 6. Aceleración de Aitken (Δ²)
+
+Mejora la convergencia de métodos iterativos lineales como el de punto fijo, aplicando la fórmula:
+
+$$
+x^* \approx x_n - \frac{(x_{n+1} - x_n)^2}{x_{n+2} - 2x_{n+1} + x_n}
+$$
+
+- Convergencia: más rápida  
+- Requiere tres iteraciones sucesivas
+
+---
+
+## ⚙️ 7. Método de Steffensen
+
+Evita el uso de derivadas como Newton, aplicando una técnica similar a Aitken pero internamente:
+
+$$
+x_{n+1} = x_n - \frac{[g(x_n) - x_n]^2}{g(g(x_n)) - 2g(x_n) + x_n}
+$$
+
+- No necesita derivadas  
+- Convergencia: **cuadrática**
+
+---
+
+## 🧮 8. Método de Horner
+
+Optimiza la evaluación de polinomios y su derivada:
+
+Dado un polinomio:
+
+$$
+P(x) = a_nx^n + a_{n-1}x^{n-1} + \dots + a_0
+$$
+
+Horner lo reescribe como:
+
+$$
+P(x) = (\dots((a_nx + a_{n-1})x + a_{n-2})x + \dots ) + a_0
+$$
+
+- Menor complejidad computacional  
+- Utilizado en combinación con Newton para raíces de polinomios
+
+---
+
+## 🔎 9. Método de Müller
+
+Extiende la secante usando una parábola para interpolar tres puntos $$x_{n}, x_{n-1}, x_{n-2}$$. Resuelve la ecuación cuadrática que pasa por ellos para estimar la raíz.
+
+- Puede encontrar raíces **complejas**
+- Convergencia: **superlineal**
+- No requiere derivadas
+
 ---
 
 ## 📊 6. Análisis de Convergencia
